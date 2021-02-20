@@ -33,6 +33,24 @@ def echo(event):
     if 'joyce' in msg:
         message = TextSendMessage(text='生日: 1995/02/03\n手機: 0973019023')
         line_bot_api.reply_message(event.reply_token, message)
+    elif 'LeetCode' in msg:
+        message = TextSendMessage(text='https://leetcode.com/problemset/all/')
+        line_bot_api.reply_message(event.reply_token, message)
+    elif 'udemy' in msg:
+        message = TextSendMessage(text='https://www.udemy.com/')
+        line_bot_api.reply_message(event.reply_token, message)
+    elif 'studio' in msg:
+        message = TextSendMessage(text='http://www.studioclassroom.com/')
+        line_bot_api.reply_message(event.reply_token, message)
+    elif 'learnc' in msg:
+        message = TextSendMessage(text='https://www.youtube.com/c/KenYiLee')
+        line_bot_api.reply_message(event.reply_token, message)
+    elif 'github' in msg:
+        message = TextSendMessage(text='https://github.com/')
+        line_bot_api.reply_message(event.reply_token, message)
+    elif 'list' in msg:
+        message = TextSendMessage(text='You can input : \njoyce\nLeetCode\nudemy\nstudio\nlearnc\ngithub')
+        line_bot_api.reply_message(event.reply_token, message)
     else:
         message = TextMessage(text=msg)
         line_bot_api.reply_message(event.reply_token, message)
